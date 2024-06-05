@@ -5,5 +5,8 @@
   "main": "defintions.d.mts",
   "author": "Gauthier Poulain",
   "license": "ISC",
-  "repository": {}
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GauthierPoulain/appwrite-functions-defintions"
+  }
 }
