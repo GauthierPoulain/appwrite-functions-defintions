@@ -1,12 +1,18 @@
 {
   "name": "appwrite-functions-defintions",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Defintions for Appwrite functions context",
   "main": "defintions.d.mts",
   "author": "Gauthier Poulain",
+  "keywords": [
+    "appwrite",
+    "functions",
+    "typescript"
+  ],
   "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/GauthierPoulain/appwrite-functions-defintions"
-  }
+  },
+  "homepage": "https://github.com/GauthierPoulain/appwrite-functions-defintions/blob/main/README.md",
 }
