@@ -1,6 +1,6 @@
 declare type AppwriteRequest = {
   bodyRaw: string;
-  bodu: Object;
+  body: Object;
   headers: Object;
   scheme: string;
   method: string;
