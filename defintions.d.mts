@@ -1,15 +1,19 @@
+
 declare type AppwriteRequest = {
-  bodyRaw: string;
-  body: Object;
-  headers: Object;
-  scheme: string;
-  method: string;
-  url: string;
-  host: string;
+  readonly body: any;
+  readonly bodyRaw: any;
+  readonly bodyText: any;
+  readonly bodyJson: any;
+  readonly bodyBinary: any;
+  headers: {};
+  method: any;
+  host: any;
+  scheme: any;
+  query: {};
+  queryString: any;
   port: number;
-  path: string;
-  queryString: string;
-  query: Object;
+  url: string;
+  path: any;
 };
 
 declare type AppwriteSendReturn = {
@@ -19,25 +23,19 @@ declare type AppwriteSendReturn = {
 };
 
 declare type AppwriteResponse = {
+  send: (body: any, statusCode?: number, headers?: {}) => AppwriteSendReturn;
+  text: (body: any, statusCode?: number, headers?: {}) => AppwriteSendReturn;
+  binary: (bytes: any, statusCode?: number, headers?: {}) => AppwriteSendReturn;
+  json: (obj: any, statusCode?: number, headers?: {}) => AppwriteSendReturn;
   empty: () => AppwriteSendReturn;
-  json: (obj: any, statusCode?: number, headers?: Object) => AppwriteSendReturn;
-  redirect: (
-    url: string,
-    statusCode?: number,
-    headers?: Object
-  ) => AppwriteSendReturn;
-  send: (
-    body: any,
-    statusCode?: number,
-    headers?: Object
-  ) => AppwriteSendReturn;
+  redirect: (url: any, statusCode?: number, headers?: {}) => AppwriteSendReturn;
 };
 
 declare type AppwriteRuntimeContext = {
   req: AppwriteRequest;
   res: AppwriteResponse;
-  log: (message: any) => void;
-  error: (message: any) => void;
+  log: (...message: any) => void;
+  error: (...message: any) => void;
 };
 
 export {

@@ -1,6 +1,6 @@
 {
   "name": "appwrite-functions-defintions",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Defintions for Appwrite functions context",
   "main": "defintions.d.mts",
   "author": "Gauthier Poulain",
